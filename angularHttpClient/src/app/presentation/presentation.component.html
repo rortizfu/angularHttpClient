@@ -1,0 +1,21 @@
+<div >
+    <table>
+        <tr>
+            <td *ngFor="let objPhoto of _objDataPhot">
+                    <app-card-presentation [objPhoto]="objPhoto" *ngIf="objPhoto.id < 10"></app-card-presentation>
+            </td>
+        </tr>
+    </table>
+    
+</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <input formControlName="user" style="margin-left: 10px"/>
+        <input formControlName="email" style="margin-left: 10px"/>
+        <input formControlName="pass" style="margin-left: 10px"/>
+        <input formControlName="pass2" style="margin-left: 10px"/>
+        <input formControlName="telefono" style="margin-left: 10px"/>
+        <button type="submit">Submit</button>
+      </form>
+      
+
